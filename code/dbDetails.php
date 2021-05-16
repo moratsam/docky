@@ -6,7 +6,7 @@ $PASS = 'o';
 $DB = 'carsides';
 
 */
-define('HOST','localhost');
+define('HOST','10.1.0.102');
 define('USER','o');
 define('PASS','o');
 define('DB','carsides');
