@@ -28,6 +28,7 @@ services:
    mariadb:
       image: mariadb
       container_name: mariadb
+      command: --default-authentication-plugin=mysql_native_password
       restart: "always"
       ports:
          - "53306:3306"

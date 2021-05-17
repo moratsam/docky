@@ -109,7 +109,6 @@ function isNameViable(){
 	if(strlen($postName) < 3){
 		return false;
 	}
-	return true;
 	$prefixes = array("BB_", "DD_", "FF_", "LL_", "RR_");
 	foreach($prefixes as $prefix){
 		if(substr($postName, 0, 3) == $prefix){
@@ -135,5 +134,5 @@ function genFilename(){
 	else 
 		$maxID =  $result['id']++; 
 
-	return substr($postName, 0, 3) . $maxID;
+	return substr($postName, 0, 3) . $maxID . "_" . time();
 }
