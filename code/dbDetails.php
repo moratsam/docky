@@ -6,7 +6,7 @@ $PASS = 'o';
 $DB = 'carsides';
 
 */
-define('HOST','10.1.0.102');
+define('HOST','mariadb');
 define('USER','o');
 define('PASS','o');
 define('DB','carsides');
