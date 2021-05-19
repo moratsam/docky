@@ -1,8 +1,8 @@
 version: "3"
 
 networks:
-   carsides-external:
-      name: "carsides-external"
+   coci:
+      name: "coci"
       external: true
    carsides-internal:
       name: "carsides-internal"
@@ -24,7 +24,7 @@ services:
       - traefik.http.routers.web.tls=true
       - traefik.enable=true
       networks:
-         - carsides-external
+         - coci
          - carsides-internal
       volumes:
          - ./code:/code
