@@ -5,7 +5,7 @@ networks:
       name: "carsides-external"
       external: true
    carsides-internal:
-		name: "carsides-internal"
+      name: "carsides-internal"
       external: false
 
 services:
