@@ -109,13 +109,17 @@ function isNameViable(){
 	if(strlen($postName) < 3){
 		return false;
 	}
-	$prefixes = array("BB_", "DD_", "FF_", "LL_", "RR_");
-	foreach($prefixes as $prefix){
-		if(substr($postName, 0, 3) == $prefix){
+
+	$f = $postName[0]; #first letter is predicted class
+	$s = $postName[1]; #second letter is actual class
+	#third letter is '_'
+	if(($f=='B' || $f=='D' || $f=='F' || $f=='L' || $f=='R') && 
+		($s=='B' || $s=='D' || $s=='F' || $s=='L' || $s=='R') &&
+		$postName[2]=='_'){
 			return true;
-		}
+	} else{
+		return false;
 	}
-	return false;
 }
 
 //retrieve max id of image from db; increment it
